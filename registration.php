@@ -66,10 +66,10 @@
 					  <input type="text" id="lname" name="lastname" placeholder="wa lunda" required>
 
 					  <label for="phonenum">Phone Number</label>
-					  <input type="number" id="phonenum" name="phonenumber" placeholder="8197368570" required>
+					  <input type="tel" id="phonenum" name="phonenumber" placeholder="8197368570" pattern="[0-9]{10,}" maxlength="15" required>
 
 					  <label for="emailid">Email Id</label>
-					  <input type="email" id="emailid" name="emailid" placeholder="example@gmail.com">
+					  <input type="email" id="emailid" name="emailid" placeholder="example@gmail.com" required>
 
 					  <label for="message">Message</label>
 					  <textarea id="message" name="message" rows="8" maxlength="500" required="required"></textarea>
