@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+
+	<link rel="stylesheet" href="style.css">
+
+	<title>About-Us | MovieProps</title>
+</head>
+
+<body class="main-grid">
+	<!-- sheet background -->
+	<div style="background-image: url('images/top-bg2.jpg');">
+		<!-- container -->
+		<div>
+			<!-- header -->
+			<header>
+
+				<!-- logo -->
+				<img id="logo_img" src="images/logo.png" alt="logo" width="140" height="50" hidden>
+				<a href="home.html">
+					<canvas id="logo" width="260" height="68" style="border:1px solid red; margin: 15px 0px 0px 25px; border-radius: 10px;"></canvas>
+				</a>
+
+				<!-- website name -->
+				<div class="title-bar">
+					<h1>Movieprops.com</h1>
+				</div>
+
+				<!-- navigation bar -->
+				<div class="container-nav">
+					<div  class="head-div">
+						<nav class="nav-bar">
+							<ul>						
+								<li><a href="home.html">Home</a></li>
+								<li class="active"><a href="about.html">About-us</a></li>
+								<li><a href="product.html">Product</a></li>
+								<li><a href="registration.php">Registration</a></li>
+								<!-- <li><a href="admin.php">Admin</a></li> -->
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- end navigation bar -->
+				<br>
+				<!-- end top bar -->
+			</header>
+			<!-- end header -->
+
+			<!-- body -->
+			<div class="container">
+				<!-- title -->
+				<div class="sub-title">
+					<h2>About us</h2>
+				</div>
+
+				<div class="content text-content title-h3">
+					<br>
+					<p>A lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<h3>Our histoty</h3>
+					<p>A lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<h3>Our philosophy</h3>
+					<p>A lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<br>
+				</div>			
+			</div><br>
+			<!-- end body -->
+
+			<!-- footer -->
+			<footer>
+				<div><p style="color: white; text-align: center;">Copyright Wa Lunda Ariel. Alright reserved</p></div><br>	
+			</footer>
+			<!-- end footer -->
+		</div>
+		<!-- end container -->
+	</div>
+	<!-- end sheet background -->
+
+	<script>
+		window.onload = function() {
+			var canvas = document.getElementById("logo");
+	    var ctx = canvas.getContext("2d");
+	    var img = document.getElementById("logo_img");
+	    ctx.drawImage(img, 0, 0, 260, 70);
+	  };
+	</script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<link rel="stylesheet" href="style.css">
+
+	<title>Home | MovieProps</title>
+
+</head>
+
+<body class="main-grid">
+	<!-- sheet background -->
+	<div style="background-image: url('images/top-bg.jpg');">
+
+		<!-- header -->
+		<header>
+			<!-- logo -->
+			<img id="logo_img" src="images/logo.png" alt="logo" width="140" height="50" hidden>
+			<a href="home.html">
+				<canvas id="logo" width="260" height="68" style="border:1px solid red; margin: 15px 0px 0px 25px; border-radius: 10px;"></canvas>
+			</a>
+
+			<!-- website name -->
+			<div class="title-bar">
+				<h1>Movieprops.com</h1>
+			</div>
+
+			<!-- navigation bar -->
+			<div class="container-nav">
+				<div  class="head-div">
+					<nav class="nav-bar">
+						<ul>						
+							<li class="active"><a href="home.html">Home</a></li>
+							<li><a href="about.html">About-us</a></li>
+							<li><a href="product.html">Product</a></li>
+							<li><a href="registration.php">Registration</a></li>
+							<!-- <li><a href="admin.php">Admin</a></li> -->
+						</ul>
+					</nav>
+				</div>
+				<!-- end navigation bar -->
+
+				<!-- caroussel -->
+				
+				<div class="head-carousel">
+					<div class="carousel fade">
+					  <img src="images/cover.jpg" style="width: 100%; height: 600px; border-radius: 10px;" alt="img">
+					</div>
+
+					<div class="carousel fade">
+					  <img src="images/cover1.jpg" style="width: 100%; height: 600px; border-radius: 10px;" alt="img">
+					</div>
+
+					<div class="carousel fade">
+					  <img src="images/cover2.jpg" style="width: 100%; height: 600px; border-radius: 10px;" alt="img">
+					</div>
+				</div>
+				<br>
+
+				<div style="text-align:center">
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				</div>
+				<!-- end caroussel -->
+			</div>
+			<br>	
+		</header>
+		<!-- end header -->
+
+		<!-- body -->
+		<section>
+			<!-- news or upcoming props -->
+			<div class="container">
+				<!-- title -->
+				<div class="sub-title">
+					<h2>Upcoming Props</h2>
+				</div>
+
+				<!-- images new props -->
+				<div class="content">
+					<div class="grid">
+						<div class="img-div">
+							<h3>Tor's Hammer</h3>
+							<a href="#"><img src="images/props1.jpg" alt="img"></a>
+						</div>
+
+						<div class="img-div">
+							<h3>Spiderman's mask</h3>
+							<a href="#"><img src="images/props2.jpg" alt="img"></a>
+						</div>
+						<div class="img-div">
+							<h3>Superman's costum 2020</h3>
+							<a href="#"><img src="images/props3.jpg" alt="img"></a>
+						</div>
+					</div>
+				</div>
+			</div><br>
+			<!-- end upcoming props -->
+
+			<!-- popular props -->
+			<div class="container">
+				<!-- title and comments -->
+				<div class="sub-title">
+					<h2>Most Popular</h2>
+				</div>
+
+				<!-- images popular props -->
+				<div class="content">
+					<div class="grid">
+						<div class="img-div">
+							<h3>Tor's Hammer</h3>
+							<a href="#"><img src="images/props4.jpg" alt="img"></a>
+						</div>
+
+						<div class="img-div">
+							<h3>Batman's new cup</h3>
+							<a href="#"><img src="images/props5.jpg" alt="img"></a>
+						</div>
+						<div class="img-div">
+							<h3>Superman's costum 2020</h3>
+							<a href="#"><img src="images/props6.jpg" alt="img"></a>
+						</div>
+					</div>
+				</div>
+				<!-- end images popular props -->
+			</div><br>
+			<!-- end popular props -->
+		</section>
+		<!-- end body -->
+
+		<!-- footer -->
+		<footer>
+			<div><p style="color: white; text-align: center;">Copyright Wa Lunda Ariel. Alright reserved</p></div><br>	
+		</footer>
+		<!-- end footer -->
+	</div>
+	<!-- end sheet background -->
+
+	<button onclick="topFunction()" id="top_btn" title="Go to top">Top</button>
+
+	<script>
+
+		//carousel
+
+		var slideIndex = 0;
+		showslides();
+
+		function showslides() {
+			var i;
+			var slides = document.getElementsByClassName("carousel");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showslides, 2000); // Change image every 2 seconds
+		}
+	
+		//Top page button
+
+		var mybutton = document.getElementById("top_btn");
+
+		
+		window.onscroll = function() {scrollFunction()};	// When the user scrolls down 20px from the top of the document, show the button
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    mybutton.style.display = "block";
+		  } else {
+		    mybutton.style.display = "none";
+		  }
+		}
+
+		
+		function topFunction() {	// When the user clicks on the button, scroll to the top of the document
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+
+		// LOGO
+
+		window.onload = function() {
+			var canvas = document.getElementById("logo");
+	    var ctx = canvas.getContext("2d");
+	    var img = document.getElementById("logo_img");
+	    ctx.drawImage(img, 0, 0, 260, 70);
+	  };
+	</script>
+
+</body>
+</html>
