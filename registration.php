@@ -103,7 +103,7 @@
 			$message=$_POST['message'];
 			$date_=date("Y-m-d", time());
 
-
+			echo ($phone);
 			database('', 'INSERT INTO customers (firstname, lastname, phone, email, message, date_) VALUES ("'.$firstname.'", "'.$lastname.'", "'.$phone.'", "'.$email.'", "'.$message.'", "'.$date_.'")');
 
 			echo ('<script type="text/javascript">
